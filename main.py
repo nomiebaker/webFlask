@@ -6,6 +6,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 app = Flask(__name__)                    # this gets the name of the file so Flask knows it's name
 proxied = FlaskBehindProxy(app)  ## add this line
 app.config['SECRET_KEY'] = '3acca409c7b773db79025add72e7393a'
+
 app.debug = True
 toolbar = DebugToolbarExtension(app)
 
