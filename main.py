@@ -1,10 +1,13 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from form import RegistrationForm
 from flask_behind_proxy import FlaskBehindProxy
+from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)                    # this gets the name of the file so Flask knows it's name
 proxied = FlaskBehindProxy(app)  ## add this line
 app.config['SECRET_KEY'] = '3acca409c7b773db79025add72e7393a'
+app.debug = True
+toolbar = DebugToolbarExtension(app)
 
 @app.route("/")                          # this tells you the URL the method below is related to
 @app.route("/home")
