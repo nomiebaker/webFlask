@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from form import RegistrationForm
 from flask_behind_proxy import FlaskBehindProxy
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 import git
 from flask_sqlalchemy import SQLAlchemy
 
